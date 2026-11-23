@@ -13,20 +13,9 @@ final DashbordController controller = Get.find<DashbordController>() ;
   Widget build(BuildContext context) {
   return Obx( 
     
-    
-    
     () => 
      Scaffold(
-floatingActionButton: controller.isadd.value
-    ? FloatingActionButton(
-        backgroundColor: const Color(0xFF0B876A),
-        onPressed: () {
-          // هنا تفتح BottomSheet أو صفحة إضافة مصروف
-          controller.isadd.value = false; // يقفل الزر بعد الضغط عليه
-        },
-        child: const Icon(Icons.add, color: Colors.white),
-      )
-    : null, // لما يكون null بيكون أنظف من Size
+ // لما يكون null بيكون أنظف من Size
     
      body: Obx(() => controller.screens[controller.currentscreen.value]()),
     bottomNavigationBar: BottomNavigationBar(
