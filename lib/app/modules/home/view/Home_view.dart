@@ -20,7 +20,12 @@ appBar: AppBar(
   ),
   title: Text("Quick Expense" , style: TextStyle(color: Colors.white),),
   centerTitle: true,
-  actions: [Icon(Icons.calendar_month , color: Colors.white,)],
+  actions: [
+    IconButton(onPressed: (){
+    //  controller.dilogadd() ;
+    }, icon:   Icon(Icons.calendar_month , color: Colors.white,))
+    
+  ],
 ),
 body: SingleChildScrollView(
   child: Column(

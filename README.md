@@ -1,17 +1,15 @@
-# quick_expense_tracker
+# Quick Expense Tracker
 
-A new Flutter project.
+تطبيق فلاتر (Flutter) سريع وخفيف لتتبع المصروفات اليومية وحساب الإجمالي، مبني باستخدام **GetX** لإدارة الحالة والتنقل مع **GetStorage** للتخزين المحلي الفوري دون الحاجة لاتصال دائم بالإنترنت.
 
-## Getting Started
+## المميزات الأساسية
+- **إضافة وحذف المصروفات بسرعة:** واجهة إدخال بسيطة عبر Bottom Sheet لإضافة بند المصروف وقيمته.
+- **حساب فوري للإجمالي:** تحديث لحظي لإجمالي المصروفات باستخدام التفاعلية (`Obx`).
+- **تخزين محلي فوري:** حفظ واسترجاع البيانات تلقائياً عبر `GetStorage` عند إغلاق التطبيق وإعادة فتحه.
+- **هيكلة منظمة:** فصل نموذج البيانات (`Model`) ومنطق التحكم والتخزين (`Controller`) عن واجهة المستخدم (`View`).
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## التقنيات والمكتبات المستخدمة
+- **Flutter & Dart**
+- **[GetX](https://pub.dev/packages/get):** لإدارة الحالة والتنقل (`GetMaterialApp`, `GetxController`, `Obx`, `Get.bottomSheet`).
+- **[GetStorage](https://pub.dev/packages/get_storage):** لتخزين قائمة المصروفات محلياً بصيغة JSON.
+- **[flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons):** لتوليد أيقونة التطبيق لنظامي Android و iOS من صورة الشعار.

@@ -1,7 +1,9 @@
 
 
 import 'package:get/get.dart';
+import 'package:quick_expense_tracker/app/modules/add/add_view/add_view.dart';
 import 'package:quick_expense_tracker/app/modules/home/view/Home_view.dart';
+import 'package:quick_expense_tracker/app/modules/stats/stats_view/stats_view.dart';
 
 class DashbordController extends GetxController{
  final RxInt currentscreen = 0.obs ; 
@@ -9,8 +11,8 @@ class DashbordController extends GetxController{
 
  final List screens = [
  () => HomeView() , 
- () => HomeView() , 
-   () => HomeView() , 
+ () => AddView() , 
+   () => StatsView() , 
   ] ; 
   
 
@@ -26,3 +28,6 @@ class DashbordController extends GetxController{
 
   }
 }
+
+
+
