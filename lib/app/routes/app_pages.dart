@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:quick_expense_tracker/app/modules/dashbord/dashbord_binding/dashbord_binding.dart';
+import 'package:quick_expense_tracker/app/modules/dashbord/dashbord_view/dashbord_view.dart';
 import 'package:quick_expense_tracker/app/modules/home/binding/Home_binding.dart';
 import 'package:quick_expense_tracker/app/modules/home/view/Home_view.dart';
 import 'package:quick_expense_tracker/app/routes/app_routes.dart';
@@ -11,6 +13,11 @@ class AppPages {
       name: AppRoutes.home,
       page: () =>  HomeView(),
       binding:  HomeBinding(),
+    ),
+        GetPage(
+      name: AppRoutes.dashbord,
+      page: () =>  DashbordView(),
+      binding:  DashbordBinding(),
     ),
   ];
 }

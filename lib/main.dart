@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
 
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
+
+      defaultTransition : Transition.downToUp , 
     //  home:  Text(AppRoutes.home),
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.dashbord,
       getPages: AppPages.pages,
     );
   }
