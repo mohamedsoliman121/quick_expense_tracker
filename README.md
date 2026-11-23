@@ -1,5 +1,10 @@
 # Quick Expense Tracker
 
+<p align="center">
+  <img src="Gemini_Generated_Image_i6f7dei6f7dei6f7.jpeg" width="250" alt="Login Screen" />
+
+</p>
+
 تطبيق فلاتر (Flutter) سريع وخفيف لتتبع المصروفات اليومية وحساب الإجمالي، مبني باستخدام **GetX** لإدارة الحالة والتنقل مع **GetStorage** للتخزين المحلي الفوري دون الحاجة لاتصال دائم بالإنترنت.
 
 ## المميزات الأساسية
