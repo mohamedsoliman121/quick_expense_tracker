@@ -27,7 +27,15 @@ appBar: AppBar(
     
   ],
 ),
-body: SingleChildScrollView(
+body: Obx(()  {
+  if(controller.data.isEmpty) {
+    return Center(
+      child: Text("Dont have data "
+      ),
+    );
+  } 
+  else {
+return SingleChildScrollView(
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     crossAxisAlignment: CrossAxisAlignment.center,
@@ -128,7 +136,7 @@ Column(
   children: [
     ListView.builder(
       shrinkWrap: true,
-      itemCount: controller.gen.length,
+      itemCount: controller.data.length,
       itemBuilder: ( context,  index) { 
     
      return Container(
@@ -166,9 +174,9 @@ Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(height: 4,) , 
-            Text(controller.gen[index], style: TextStyle(fontSize: 20),) , 
-              Text("morning brew", style: TextStyle(fontSize: 15),) , 
-                Text("food & drink", style: TextStyle(fontSize: 10),) , 
+            Text(controller.data[index]['des'], style: TextStyle(fontSize: 20),) , 
+              Text(controller.data[index]['catogray'], style: TextStyle(fontSize: 15),) , 
+                Text(controller.data[index]['account'], style: TextStyle(fontSize: 10),) , 
                    SizedBox(height: 4,) , 
           ],
          ),
@@ -177,8 +185,8 @@ Column(
      Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-          Text("\$-4.8" , style:  TextStyle(color: Colors.red),) , 
-            Text("\$4.0 time") , 
+          Text(controller.data[index]['amont'] , style:  TextStyle(color: Colors.red),) , 
+            Text(controller.data[index]['date']) , 
       ],
      )
 
@@ -201,7 +209,9 @@ Column(
 
 //
 
-)
+) ;
+
+}}) 
 
    );
   }
