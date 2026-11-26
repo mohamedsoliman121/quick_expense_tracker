@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 class StatsController extends GetxController{
 final GetStorage box = GetStorage();
+final GetStorage one = GetStorage() ;
 
   final RxList<Map<String, dynamic>> data =
       <Map<String, dynamic>>[].obs;

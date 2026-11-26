@@ -8,7 +8,8 @@ import 'package:quick_expense_tracker/app/routes/app_routes.dart';
 Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-  await GetStorage.init();
+await GetStorage.init();
+
   runApp(const MyApp());
 }
 
